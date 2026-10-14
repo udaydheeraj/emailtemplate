@@ -52,4 +52,29 @@ phase 2: database and enitity design
 ✅ createdAt / updatedAt
 ✅ Versioning concept
 
+email_templates
+│
+├── id
+├── template_code
+├── template_name
+├── description
+├── subject
+├── html_body
+├── status
+├── version
+├── created_at
+└── updated_at
+
+ORDER_CONFIRMATION
+│
+├── Version 1 ── ACTIVE
+│
+└── Version 2 ── INACTIVE
+
+template_code + version
+│
+└── UNIQUE
+
+
+
 

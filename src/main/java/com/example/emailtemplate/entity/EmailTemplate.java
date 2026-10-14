@@ -10,7 +10,13 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(
-        name = "email_templates"
+        name = "email_templates",
+        uniqueConstraints = {
+                @UniqueConstraint(
+                        name = "uk_template_code_version",
+                        columnNames = {"template_code","status"}
+                )
+        }
 )
 @Getter
 @Setter
@@ -22,7 +28,7 @@ public class EmailTemplate {
     @GeneratedValue(
             strategy = GenerationType.IDENTITY
     )
-    private int id;
+    private Long id;
 
 
     @Column(
